@@ -10,6 +10,29 @@
     color: blueviolet;
 }
 
+.contacts-link {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: red;
+    transition: 150ms;
+}
+.contacts-link span {
+    font-size: 28px;
+}
+
+.contacts-link.email {
+    margin-top: 16px;
+}
+
+.contacts-link:hover {
+    opacity: 0.4;
+    transition: 150ms;
+    text-decoration: none;
+    color: red;
+
+}
+
 .map-config-btn button {
     margin-top: 14px;
 }
