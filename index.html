@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test task Leaflet&AngularJS</title>
+
+    <link href="lib/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/abn_tree.css" rel="stylesheet" />
+    <link href="lib/leaflet.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/leaflet.js"></script>
+    <script src="lib/abn_tree_directive.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/coordinates_tree/coordinatesTreeCtrl.js"></script>
+    <script src="app/hovered_coords/hoveredCoordsCtrl.js"></script>
+    <script src="app/leaflet_map/leafletMapCtrl.js"></script>
+
+</head>
+<body>
+
+<header>
+    <div class="header-wrapper page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="header-title">
+                        <h2>Leaflet & AngularJS</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="content-wrapper">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 custom-hor-padding">
+                <div class="panel panel-info">
+                    <div class="panel-heading">List of coordinates</div>
+                    <div class="panel-body">
+                        <div class="coordinates-scope" ng-controller="mainCoordinatesTreeCtrl">
+                            <abn-tree tree-data="coords_tree"></abn-tree>
+                        </div>
+                    </div>
+                    <div class="panel-footer">* Red items have coordinates data.</div>
+                </div>
+            </div>
+
+            <div class="col-md-5 custom-hor-padding">
+                <div id="map" class="map-wrapper" ng-controller="leafletMapCtrl">
+                    <!--Map will insert here.-->
+                </div>
+            </div>
+
+            <div class="col-md-3 custom-hor-padding">
+                <div class="panel panel-info">
+                    <div class="panel-heading">Removed map's markers</div>
+                    <div class="panel-body">
+                        <div class="hovered-coords-wrapper" ng-controller="hoveredCoordsCtrl">
+                            <div class="removed-markers-list" ng-repeat="removed_marker in removed_map_markers">
+                                <div class="item input-group">
+                                    <span class="form-control">{{removed_marker.label}}</span>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default delete-btn"
+                                                type="button"
+                                                ng-click="recreateCoordsItem(removed_marker.uid)">x
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

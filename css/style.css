@@ -1,0 +1,73 @@
+
+.header-wrapper {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #bce8f1;
+    margin-bottom: 30px;
+}
+
+.header-title {
+    color: blueviolet;
+}
+
+.map-config-btn button {
+    margin-top: 14px;
+}
+
+#map {
+    height: 600px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+.custom-hor-padding {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.hovered-coords-wrapper {
+    min-height: 550px;
+}
+
+.hovered-coords-wrapper .form-control {
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 8px;
+}
+
+.coordinates-scope {
+    min-height: 495px;
+}
+
+.panel-body {
+    padding:5px 5px;
+}
+
+.text-color-red a{
+    color: red;
+}
+.delete-btn {
+    font-weight: 900;
+    color: red;
+    background-color: #fafafa;
+}
+
+.removed-markers-list .item {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.panel-heading {
+    font-weight: 800;
+    text-align: center;
+}
+
+.panel-footer {
+    color: red;
+    font-size: 12px;
+
+}
+
+
